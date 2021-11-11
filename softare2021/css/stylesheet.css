@@ -1,0 +1,238 @@
+/*---MENU DESPLGABLE--*/
+{
+	margin:0;
+	padding:0;
+}
+ 
+header {
+	margin-top:10px;
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    position: relative;
+}
+ 
+nav {
+    top:-20px;
+    position: absolute;
+    left:0;
+    right:0;
+	margin:20px auto;
+	max-width:1000px;
+	width:90%;
+}
+ 
+nav ul {
+	list-style:none;
+}
+ 
+nav > ul {
+	display:table;
+	width:100%;
+	background:#000;
+	position:relative;
+}
+ 
+nav > ul li {
+	display:table-cell;
+}
+ 
+/*Sub-menu*/
+nav > ul > li:hover > ul {
+	display:block;
+	height:100%;
+}
+ 
+nav > ul > li > ul {
+	display:block;
+	position:absolute;
+	background:#000;
+	left:0;
+	right:0;
+	overflow:hidden;
+	height:0%;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul > li > ul > li a:hover {
+	background:#5da5a2;
+}
+ 
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:-55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul > li > a span {
+	display:block;
+	line-height:60px;
+
+}
+ 
+nav > ul > li > a:hover > span {
+	top:0;
+}
+ 
+/*Colores*/
+nav ul li a .primero {
+	background:#0e5061;
+    
+}
+ 
+nav ul li a .segundo {
+	background:#5da5a2;
+}
+ 
+nav ul li a .tercero {
+	background:#f25724;
+}
+/*--EDITANDO MARGENES POR DEFECTO------------*/
+{
+    margin:auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open sans", "roboto", sans-serif;
+}
+
+/*--EDITANDO TITULO----------------------------------------------------*/
+.titulo{
+font-size: 26px;
+margin-bottom: 20px;
+color: #fff;    
+}
+/*--EDITANDO FORMULARIO----------------------------------------------------*/
+.formulario{
+width: 460px;
+padding:30px;
+margin: auto;
+margin-top: 100px;
+}
+/*--EDITANDO INPUTS----------------------------------------------------*/
+.cajas{
+width: 100%;
+padding: 15px;
+border-radius: 2px;
+border: none;
+margin-bottom: 20px;
+font-size: 15px;
+border-left: 20px solid #79b7c9;
+border-left: 20px solid #79b7c9; 
+transition: all .3s ease;    
+}
+.cajas:hover, .cajas:focus{
+    border-left: 20px solid #e28282;
+    border-right: 20px solid #e28282;
+}
+
+/*--EDITADO BOTON REGISTRAR--*/
+.btn{
+    width: 100%;
+    padding: 15px 32px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    background: #79b7c9;
+    color: #fff;
+    font-size:16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all .3 ease;
+}
+.btn:hover{
+    background: #5593a5;
+}
+/*--OTRA OPCION--*/
+.otra-opcion{
+    color: #e28282;
+    font-weight: bold;
+    text-align: center;
+    transition: all .3 ease;
+    text-decoration: none;
+}
+.otra-opcion:hover{
+    color: #e28282;
+}
+/*--iconos--*/
+i{
+    color: black;
+    font-size: 45px;
+}
+/*--BOTON DE MESSENGER--*/ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#btn-mas{
+    display: none;
+}
+.container{
+    position: left;
+    bottom: 20px;
+    right: 20 px;
+}
+.redes a, .icon-mss{
+    display: block;
+    text-decoration: none;
+    background:  #e28282;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0,4);
+    transition: all 500ms ease;   
+}
+.redes a:hover{
+    background: #fff;
+    color: #e28282;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.icon-mss{
+    cursor: pointer;
+    font-size: 30px;
+    
+}
+#btn-mas:checked~ .btn-mas .icon-mss{
+    transform: rotate(360deg);
+    font-size: 35px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>Flawless English chat messenger</title>
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body bgcolor ="#58D3F7" text="000000">
+	
+		<div class="container">	
+			<!-- menu inferior -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" a href="home.html"><span>home</span></a>
+				<span class="right"><a class="codrops-icon codrops-icon-drop" href="#"><span></span></a></span>
+			</div>
+			<header>
+<td>
+<div align><center><img src="flawless.jpg">
+</td>
+				<h1>Decidimos incluir un Chat en Facebook Messenger como tambien un chat online aqui en el menu inferior</h1>
+				<h2>¡Esperamos que aprendas grandes cosas con nosotros!</h2>	
+			</header>
+			<div class="main clearfix">
+				<nav id="menu" class="nav">					
+					<ul>
+						<li>
+							<a href="home.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+								<span>Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="chat01.php">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>Chat Online</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.me/108612811006031">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Messenger</span>
+							</a>
+						</li>
+                            </ul>
+				</nav>
+			</div>
+		<!-- /container -->
+		<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// 
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+	</body>
+</html>
